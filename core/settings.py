@@ -27,9 +27,12 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-
+    # django apps
     "product.apps.ProductConfig",
     "index.apps.IndexConfig",
+
+    # third-party apps
+    "ckeditor",
 ]
 
 MIDDLEWARE = [

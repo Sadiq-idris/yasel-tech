@@ -1,52 +1,11 @@
 
 
-.facebook svg{
-    padding: 10px;
-    width:50px;
-    background-color: white;
-    border-radius: 10px;
-    transition:all 500ms ease-in;
-}
-
-.facebook svg:hover{
-    color:white;
-    background-color: #0d6efd;
-}
-
-
-.instagram svg{
-    color:orangered;
-    padding: 10px;
-    width:50px;
-    background-color: white;
-    border-radius: 10px;
-    transition:all 500ms ease-in;
-}
-
-.instagram svg:hover{
-    color:white;
-    background-color: orangered;
-}
-
-
-.linkedin svg{
-    padding: 10px;
-    width:50px;
-    background-color: white;
-    border-radius: 10px;
-    transition:all 500ms ease-in;
-}
-
-.linkedin svg:hover{
-    color:white;
-    background-color: #0d6efd;
-}
 
 
 .whatsapp svg{
     color: lightgreen;
-    padding: 10px;
-    width:50px;
+    padding: 20px;
+    width:100px;
     background-color: white;
     border-radius: 10px;
     transition:all 500ms ease-in;
@@ -81,5 +40,8 @@
     .m{
         width: 100%;
         margin: 0 auto;
+    }
+    .mr{
+        margin:auto 10px;
     }
 }

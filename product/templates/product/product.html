@@ -1,0 +1,119 @@
+{% extends 'index/base.html' %}
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+
+    <div class="container my-5">
+        <h1 class="text-center">Products</h1>
+
+        <div>
+            <h2 class="my-3">Computers</h2>
+            <div class="row gap-3 my-md-5">
+                {% for computer in computers %}
+                    <a href="{% url 'detail' computer.pk %}" class="col a">
+                        <div>
+                            <div
+                            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="
+                            background-image: url('{{ computer.thumbnail.url }}');
+                            background-position: center;
+                            background-size:cover;
+                            background-repeat: no-repeat;
+                            background-blend-mode:hard-light;
+                            background-color: orange;
+                            ">
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ computer.name }}</h3>
+                                    <ul class="d-flex list-unstyled mt-auto">
+                                        <li class="d-flex align-items-center me-3">
+                                            &#8358;
+                                            <small>{{ computer.price }}</small>
+                                        </li>
+                                        <li class="d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <small>{{ computer.tags }}</small>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div>
+            <h2 class="my-3">iWatches</h2>
+            <div class="row gap-3 my-5">
+                {% for iwatch in iwatches %}
+                <a href="{% url 'detail' iwatch.pk %}" class="col a">
+                    <div>
+                        <div
+                        class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="
+                        background-image: url('{{ iwatch.thumbnail.url }}');
+                        background-position: center;
+                        background-size:cover;
+                        background-repeat: no-repeat;
+                        background-blend-mode:hard-light;
+                        background-color: orange;
+                        ">
+                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ iwatch.name }}</h3>
+                                <ul class="d-flex list-unstyled mt-auto">
+                                    <li class="d-flex align-items-center me-3">
+                                        &#8358;
+                                        <small>{{ iwatch.price }}</small>
+                                    </li>
+                                    <li class="d-flex align-items-center me-3">
+                                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                        <small>{{ iwatch.tags }}</small>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div>
+            <h2 class="my-3">Airpods</h2>
+            <div class="row gap-3 my-5">
+                {% for airpod in airpods %}
+                    <a href="{% url 'detail' airpod.pk %}"class="col a">
+                        <div>
+                            <div
+                            class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="
+                            background-image: url('{{ airpod.thumbnail.url }}');
+                            background-position: center;
+                            background-size:cover;
+                            background-repeat: no-repeat;
+                            background-blend-mode:hard-light;
+                            background-color: orange;
+                            ">
+                                <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ airpod.name }}</h3>
+                                    <ul class="d-flex list-unstyled mt-auto">
+                                        <li class="d-flex align-items-center me-3">
+                                            &#8358;
+                                            <small>{{ airpod.price }}</small>
+                                        </li>
+                                        <li class="d-flex align-items-center me-3">
+                                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                            <small>{{ airpod.tags }}</small>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+
+    </div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+<div class="container pt-5">
+    <h1 class="text-center my-4">Products</h1>
+    <div class="row gap-3">
+        {% for product in products %}
+        <a href="{% url 'detail' product.pk %}" class="a col">
+            <div class="">
+                <div
+                class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="
+                background-image: url('{{ product.thumbnail.url }}');
+                background-position: center;
+                background-size:cover;
+                background-repeat: no-repeat;
+                background-blend-mode:hard-light;
+                background-color: orange;
+                ">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">{{ product.name }}</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                            <li class="d-flex align-items-center me-3">
+                                &#8358;
+                                <small>{{ product.price }}</small>
+                            </li>
+                            <li class="d-flex align-items-center me-3">
+                                <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"></use></svg>
+                                <small>{{ product.tags }}</small>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </a>
+        {% endfor %}
+        <a href="{% url 'product' %}" class="icon-link">
+            More
+            <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+        </a>
+    </div>
+</div>
